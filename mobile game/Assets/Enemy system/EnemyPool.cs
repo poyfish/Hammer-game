@@ -15,6 +15,9 @@ public class EnemyPool : ScriptableObject
         public int difficultyMin;
     }
 
-
     public EnemyStats[] enemies;
+
+    public float timeBetweenSpawnsMin;
+
+    public float timeBetweenSpawnsMax;
 }

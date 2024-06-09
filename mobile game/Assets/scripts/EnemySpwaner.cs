@@ -8,10 +8,6 @@ public class EnemySpawner : MonoBehaviour
 {
     public EnemyPool enemies;
 
-    public float timeBetweenSpawns;
-
-    public int lapNumber;
-
     public bool isSpwanerSpwaningRight;
 
     private DifficultyManager difficultyManager;
@@ -43,9 +39,9 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(SpawnEnemies());
-
         difficultyManager = FindObjectOfType<DifficultyManager>();
+
+        StartCoroutine(SpawnEnemies());
     }
 
     void Update()
@@ -63,18 +59,20 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator SpawnEnemies()
     {
 
-        for (int i = 0; i < lapNumber; i++)
+        for (int i = 0; i < int.MaxValue; i++)
         {
-            yield return new WaitForSeconds(timeBetweenSpawns);
-
             EnemyPool CulledPool = difficultyManager.GetCulledPool(enemies);
 
-            if (CulledPool.enemies.Length > 0)
+            EnemyPool TimePool = difficultyManager.GetAppliedSpawnTimePool(CulledPool);
+
+            yield return new WaitForSeconds(Random.Range(TimePool.timeBetweenSpawnsMin, TimePool.timeBetweenSpawnsMax));
+
+            if (TimePool.enemies.Length > 0)
             {
                 int randomIndex = Random.Range(0, CulledPool.enemies.Length);
-                GameObject enemy = Instantiate(CulledPool.enemies[randomIndex].Prefab, transform.position, Quaternion.identity, transform);
+                GameObject enemy = Instantiate(TimePool.enemies[randomIndex].Prefab, transform.position, Quaternion.identity, transform);
 
-                EnemyInfo enemyInfo = new EnemyInfo(enemy, enemy.GetComponent<Rigidbody2D>(), enemy.GetComponent<Collider2D>(), enemy.GetComponent<SpriteRenderer>(), CulledPool.enemies[randomIndex]);
+                EnemyInfo enemyInfo = new EnemyInfo(enemy, enemy.GetComponent<Rigidbody2D>(), enemy.GetComponent<Collider2D>(), enemy.GetComponent<SpriteRenderer>(), TimePool.enemies[randomIndex]);
 
                 SpawnedEnemies.Add(enemyInfo);
 

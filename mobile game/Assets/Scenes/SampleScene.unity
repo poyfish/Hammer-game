@@ -251,6 +251,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 0
   DifficultySpeed: 0.1
+  SpawnTimeMin: 0
+  SpawnTimeMax: 0
+  SpawnTimeSpeedMin: 0
+  SpawnTimeSpeedMax: 0.1
 --- !u!1 &314814656
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +909,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 513dbef493618a540b406cc30841d197, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2116,7 +2120,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1536930679, guid: cd793d2d81eadc9469e823015850f368, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
