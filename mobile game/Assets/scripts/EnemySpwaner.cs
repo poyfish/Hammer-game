@@ -2,26 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static EnemyPool;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public EnemyStats[] enemies;
+    public EnemyPool enemies;
+
     public float timeBetweenSpawns;
 
     public int lapNumber;
 
-
     public bool isSpwanerSpwaningRight;
-
-    [System.Serializable]
-    public struct EnemyStats
-    {
-        public GameObject Prefab;
-
-        public float speed;
-
-        public int difficulty;
-    }
 
     public struct EnemyInfo
     {
@@ -72,12 +63,12 @@ public class EnemySpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(timeBetweenSpawns);
 
-            if (enemies.Length > 0)
+            if (enemies.enemies.Length > 0)
             {
-                int randomIndex = Random.Range(0, enemies.Length);
-                GameObject enemy = Instantiate(enemies[randomIndex].Prefab, transform.position, Quaternion.identity, transform);
+                int randomIndex = Random.Range(0, enemies.enemies.Length);
+                GameObject enemy = Instantiate(enemies.enemies[randomIndex].Prefab, transform.position, Quaternion.identity, transform);
 
-                EnemyInfo enemyInfo = new EnemyInfo(enemy, enemy.GetComponent<Rigidbody2D>(), enemy.GetComponent<Collider2D>(), enemy.GetComponent<SpriteRenderer>(), enemies[randomIndex]);
+                EnemyInfo enemyInfo = new EnemyInfo(enemy, enemy.GetComponent<Rigidbody2D>(), enemy.GetComponent<Collider2D>(), enemy.GetComponent<SpriteRenderer>(), enemies.enemies[randomIndex]);
 
                 SpawnedEnemies.Add(enemyInfo);
 
