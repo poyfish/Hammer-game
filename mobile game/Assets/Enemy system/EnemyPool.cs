@@ -13,7 +13,6 @@ public class EnemyPool : ScriptableObject
         public float speed;
 
         public int difficultyMin;
-        public int difficultyMax;
     }
 
 

@@ -14,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
 
     public bool isSpwanerSpwaningRight;
 
+    private DifficultyManager difficultyManager;
+
     public struct EnemyInfo
     {
         public GameObject gameObject;
@@ -42,6 +44,8 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnEnemies());
+
+        difficultyManager = FindObjectOfType<DifficultyManager>();
     }
 
     void Update()
@@ -63,12 +67,14 @@ public class EnemySpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(timeBetweenSpawns);
 
-            if (enemies.enemies.Length > 0)
-            {
-                int randomIndex = Random.Range(0, enemies.enemies.Length);
-                GameObject enemy = Instantiate(enemies.enemies[randomIndex].Prefab, transform.position, Quaternion.identity, transform);
+            EnemyPool CulledPool = difficultyManager.GetCulledPool(enemies);
 
-                EnemyInfo enemyInfo = new EnemyInfo(enemy, enemy.GetComponent<Rigidbody2D>(), enemy.GetComponent<Collider2D>(), enemy.GetComponent<SpriteRenderer>(), enemies.enemies[randomIndex]);
+            if (CulledPool.enemies.Length > 0)
+            {
+                int randomIndex = Random.Range(0, CulledPool.enemies.Length);
+                GameObject enemy = Instantiate(CulledPool.enemies[randomIndex].Prefab, transform.position, Quaternion.identity, transform);
+
+                EnemyInfo enemyInfo = new EnemyInfo(enemy, enemy.GetComponent<Rigidbody2D>(), enemy.GetComponent<Collider2D>(), enemy.GetComponent<SpriteRenderer>(), CulledPool.enemies[randomIndex]);
 
                 SpawnedEnemies.Add(enemyInfo);
 
@@ -78,10 +84,6 @@ public class EnemySpawner : MonoBehaviour
                 {
                     Physics2D.IgnoreCollision(enemyInfo.coll, other.GetComponent<Collider2D>());
                 }
-            }
-            else
-            {
-                Debug.LogError("No enemies assigned to the spawner!");
             }
         }
     }

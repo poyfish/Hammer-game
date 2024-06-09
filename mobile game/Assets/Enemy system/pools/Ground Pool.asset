@@ -16,8 +16,6 @@ MonoBehaviour:
   - Prefab: {fileID: 6261739131365108986, guid: fcc221063cb866f488e7bbabcfeae5a8, type: 3}
     speed: 3
     difficultyMin: 0
-    difficultyMax: 2
   - Prefab: {fileID: 3463855092563684590, guid: 5a346760ca03d444b9b7d03689de404c, type: 3}
     speed: 8
     difficultyMin: 1
-    difficultyMax: 3
