@@ -51,8 +51,6 @@ public class DifficultyManager : MonoBehaviour
 
         NewPool.timeBetweenSpawnsMax = Mathf.Clamp(NewPool.timeBetweenSpawnsMax, 0, float.MaxValue);
 
-        print(NewPool.timeBetweenSpawnsMin + ", " + NewPool.timeBetweenSpawnsMax);
-
         return NewPool;
     }
 }
