@@ -4,17 +4,23 @@ using UnityEngine;
 using static EnemySpawner;
 using static EnemyPool;
 using System.Linq;
+using NaughtyAttributes;
 
 public class DifficultyManager : MonoBehaviour
 {
     [Header("Difficulty")]
+
+    [ReadOnly]
     public float Difficulty;
 
     public float DifficultySpeed;
 
     [Header("Spawn Times")]
+
+    [ReadOnly]
     public float SpawnTimeMin;
 
+    [ReadOnly]
     public float SpawnTimeMax;
 
     public float SpawnTimeSpeedMin;
