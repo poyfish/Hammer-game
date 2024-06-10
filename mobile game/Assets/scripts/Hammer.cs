@@ -22,6 +22,8 @@ public class Hammer : MonoBehaviour
 
     bool isHammering;
 
+    public bool isHammeringRight;
+
 
     void Start()
     {
@@ -49,12 +51,16 @@ public class Hammer : MonoBehaviour
                 StartCoroutine(ActivateCollider(hammerColliderRight));
                 anim.CrossFade("hammer hammering",0,0);
                 sprite.flipX = true;
+
+                isHammeringRight = true;
             }
             else if(!isMouseRight && !isHammering)
             {
                 StartCoroutine(ActivateCollider(hammerColliderLeft));
                 anim.CrossFade("hammer hammering", 0, 0);
-                sprite.flipX = false;               
+                sprite.flipX = false;
+
+                isHammeringRight = false;
             }
         }
     }
