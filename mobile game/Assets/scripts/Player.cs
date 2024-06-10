@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public GameObject RestartButton;
+
+
     public Hammer hammer;
 
     SpriteRenderer sprite;
@@ -47,5 +51,17 @@ public class Player : MonoBehaviour
     public void OnDeath()
     {
         sprite.enabled = false;
+
+        Invoke("EnableButton", .7f);
+    }
+
+    public void EnableButton()
+    {
+        RestartButton.SetActive(true);
+    }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
