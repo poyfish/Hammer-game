@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
 using UnityEngine.Events;
+using NaughtyAttributes;
 
 public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsShowListener
 {
@@ -38,6 +39,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
         Advertisement.Initialize(gameId,TestMode, this);
     }
 
+    [Button("play ad",EButtonEnableMode.Playmode)]
     public void PlayRewardAd()
     {
         if (!Advertisement.isInitialized) return;
