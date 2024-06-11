@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public GameObject RestartButton;
-
-
     public Hammer hammer;
 
     SpriteRenderer sprite;
@@ -38,11 +35,6 @@ public class Player : MonoBehaviour
         {
             Rigidbody2D rb = hammer.GetComponent<Rigidbody2D>();
 
-            rb.bodyType = RigidbodyType2D.Dynamic;
-
-            rb.gravityScale = 4;
-
-
             anim.CrossFade("player_death",0,0);
         }
     }
@@ -51,13 +43,6 @@ public class Player : MonoBehaviour
     public void OnDeath()
     {
         sprite.enabled = false;
-
-        Invoke("EnableButton", .7f);
-    }
-
-    public void EnableButton()
-    {
-        RestartButton.SetActive(true);
     }
 
     public void RestartScene()
