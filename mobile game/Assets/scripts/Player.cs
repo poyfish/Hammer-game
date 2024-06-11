@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
             Rigidbody2D rb = hammer.GetComponent<Rigidbody2D>();
 
             anim.CrossFade("player_death",0,0);
+
+            hammer.enabled = false;
         }
     }
 
