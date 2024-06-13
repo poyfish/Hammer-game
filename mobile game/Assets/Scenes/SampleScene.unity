@@ -896,7 +896,6 @@ MonoBehaviour:
   force: 0.1
   interval: 0.005
   isHammeringRight: 0
-  CanHammer: 0
 --- !u!82 &822391138
 AudioSource:
   m_ObjectHideFlags: 0
