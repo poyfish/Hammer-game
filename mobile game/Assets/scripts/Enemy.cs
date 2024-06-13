@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
 
 
     public string squashed_animation_name;
+
     void Start()
     {
         anim = GetComponent<Animator>();

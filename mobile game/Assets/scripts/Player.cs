@@ -33,8 +33,6 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Rigidbody2D rb = hammer.GetComponent<Rigidbody2D>();
-
             anim.CrossFade("player_death",0,0);
 
             hammer.enabled = false;

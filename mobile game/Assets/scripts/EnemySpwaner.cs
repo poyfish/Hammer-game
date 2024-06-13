@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
 
     private DifficultyManager difficultyManager;
 
+    private Collider2D PlayerColl;
+
     public struct EnemyInfo
     {
         public GameObject gameObject;
@@ -40,6 +42,8 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         difficultyManager = FindObjectOfType<DifficultyManager>();
+
+        PlayerColl = FindObjectOfType<Player>().GetComponent<Collider2D>();
 
         StartCoroutine(SpawnEnemies());
     }
@@ -77,6 +81,8 @@ public class EnemySpawner : MonoBehaviour
                 SpawnedEnemies.Add(enemyInfo);
 
                 enemy.GetComponent<Enemy>().Info = enemyInfo;
+
+                //Physics2D.IgnoreCollision(enemyInfo.coll, PlayerColl);
 
                 foreach (Enemy other in FindObjectsOfType<Enemy>())
                 {
