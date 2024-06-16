@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
             anim.CrossFade("player_death",0,0);
 
             hammer.enabled = false;
+
+            hammer.anim.CrossFade(hammer.HammerObject.DeathAnimation.name, 0, 0);
         }
     }
 

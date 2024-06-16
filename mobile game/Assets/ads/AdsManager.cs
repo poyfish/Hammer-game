@@ -20,10 +20,9 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     public UnityEvent OnAdComplete;
 
     string gameAdUnitId;
-
+    
     void Awake()
     {
-
         gameId = googleId;
 
         gameAdUnitId = androidAdUnitId;

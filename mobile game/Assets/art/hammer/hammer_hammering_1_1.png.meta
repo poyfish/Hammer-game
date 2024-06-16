@@ -236,7 +236,7 @@ TextureImporter:
       name: hammer_hammering_1_1_4
       rect:
         serializedVersion: 2
-        x: 257
+        x: 258
         y: 8
         width: 27
         height: 34
@@ -257,7 +257,7 @@ TextureImporter:
       name: hammer_hammering_1_1_5
       rect:
         serializedVersion: 2
-        x: 315
+        x: 314
         y: 8
         width: 31
         height: 37
@@ -278,7 +278,7 @@ TextureImporter:
       name: hammer_hammering_1_1_6
       rect:
         serializedVersion: 2
-        x: 375
+        x: 373
         y: 8
         width: 32
         height: 37
@@ -299,7 +299,7 @@ TextureImporter:
       name: hammer_hammering_1_1_7
       rect:
         serializedVersion: 2
-        x: 432
+        x: 428
         y: 8
         width: 37
         height: 40
@@ -320,7 +320,7 @@ TextureImporter:
       name: hammer_hammering_1_1_8
       rect:
         serializedVersion: 2
-        x: 491
+        x: 486
         y: 8
         width: 39
         height: 41
@@ -341,7 +341,7 @@ TextureImporter:
       name: hammer_hammering_1_1_9
       rect:
         serializedVersion: 2
-        x: 551
+        x: 546
         y: 8
         width: 39
         height: 41
@@ -354,6 +354,27 @@ TextureImporter:
       bones: []
       spriteID: 6d7a66ac2a4addb4ea55b94feeea8ddb
       internalID: -634769516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer_hammering_1_1_10
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 53
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7102ef48355fb248bc7e4db4e3a993d
+      internalID: 2062111050
       vertices: []
       indices: 
       edges: []

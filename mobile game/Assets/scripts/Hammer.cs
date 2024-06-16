@@ -19,7 +19,8 @@ public class Hammer : MonoBehaviour
     [HideInInspector]
     public bool isHammeringRight;
 
-    private Animator anim;
+    [HideInInspector]
+    public Animator anim;
     private SpriteRenderer sprite;
     private CameraShake shake;
 
