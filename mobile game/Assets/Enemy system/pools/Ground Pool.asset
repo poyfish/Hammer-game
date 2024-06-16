@@ -18,9 +18,9 @@ MonoBehaviour:
     difficultyMin: 0
   - Prefab: {fileID: 3463855092563684590, guid: 5a346760ca03d444b9b7d03689de404c, type: 3}
     speed: 8
-    difficultyMin: 1
+    difficultyMin: 2
   - Prefab: {fileID: 5575361049211894340, guid: 643789df14ee09c4d9c02059a65c469a, type: 3}
     speed: 4
-    difficultyMin: 0
+    difficultyMin: 3
   timeBetweenSpawnsMin: 2
   timeBetweenSpawnsMax: 4

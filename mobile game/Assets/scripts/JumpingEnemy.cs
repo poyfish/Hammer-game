@@ -7,6 +7,7 @@ public class JumpingEnemy : MonoBehaviour
     Rigidbody2D rb;
     BoxCollider2D coll;
     Animator anim;
+    Enemy enemy;
 
     public float jumpForce;
     public float jumpSpeed;
@@ -17,10 +18,13 @@ public class JumpingEnemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        enemy = GetComponent<Enemy>();
     }
 
     void Update()
     {
+        if(enemy.IsDead) return;
+
         if (IsGrounded())
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;

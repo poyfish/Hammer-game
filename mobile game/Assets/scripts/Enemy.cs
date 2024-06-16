@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 
     Animator anim;
 
+    public bool IsDead;
+
 
     public string squashed_animation_name;
 
@@ -26,7 +28,9 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("hammer"))
         {
-            Info.rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            IsDead = true;
+
+            Info.rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             anim.CrossFade(squashed_animation_name,0,0);
             Invoke("Destroy", 2f);
         }

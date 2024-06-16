@@ -893,6 +893,7 @@ MonoBehaviour:
   hammerColliderRight: {fileID: 895729198}
   hammerColliderLeft: {fileID: 1501923551}
   isHammeringRight: 0
+  anim: {fileID: 0}
 --- !u!82 &822391138
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1007,7 +1008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &895729200
 Transform:
   m_ObjectHideFlags: 0
@@ -1112,23 +1113,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 895729201}
-    m_ColliderPaths:
-    - - X: 12436837
-        Y: 14377919
-      - X: 2300615
-        Y: 36314052
-      - X: -10446461
-        Y: 37037908
-      - X: -10944394
-        Y: 27260416
-      - X: 4773445
-        Y: -5017680
-      - X: 14275993
-        Y: -4812847
-      - X: 19023446
-        Y: -5296542
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 1.9022949, y: -0.5296491}
@@ -1777,7 +1762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1501923553
 Transform:
   m_ObjectHideFlags: 0
@@ -1830,23 +1815,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1501923556}
-    m_ColliderPaths:
-    - - X: -14275993
-        Y: -4812847
-      - X: -4773445
-        Y: -5017680
-      - X: 10944394
-        Y: 27260416
-      - X: 10446461
-        Y: 37037908
-      - X: -2300615
-        Y: 36314052
-      - X: -12436837
-        Y: 14377919
-      - X: -19023446
-        Y: -5296542
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: -1.9023288, y: -0.5296066}
