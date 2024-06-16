@@ -30,7 +30,9 @@ public class Enemy : MonoBehaviour
         {
             IsDead = true;
 
-            Info.rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            Info.rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            Info.coll.enabled = false;
+
             anim.CrossFade(squashed_animation_name,0,0);
             Invoke("Destroy", 2f);
         }

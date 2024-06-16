@@ -23,7 +23,11 @@ public class JumpingEnemy : MonoBehaviour
 
     void Update()
     {
-        if(enemy.IsDead) return;
+        if (enemy.IsDead)
+        {
+            transform.position = new Vector3(transform.position.x, -0.8f);
+            return;
+        }
 
         if (IsGrounded())
         {
