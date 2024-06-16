@@ -888,13 +888,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83de9ca025b3674db25706d6c9e9feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shake: {fileID: 519420033}
+  HammerObject: {fileID: 11400000, guid: 43e23f58807f4fa43906fd32eccb451d, type: 2}
+  HitSoundSource: {fileID: 822391138}
   hammerColliderRight: {fileID: 895729198}
   hammerColliderLeft: {fileID: 1501923551}
-  hitGround: {fileID: 822391138}
-  cycles: 4
-  force: 0.1
-  interval: 0.005
   isHammeringRight: 0
 --- !u!82 &822391138
 AudioSource:

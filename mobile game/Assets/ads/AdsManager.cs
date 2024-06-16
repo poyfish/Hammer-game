@@ -16,7 +16,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     private string gameId;
 
     string androidAdUnitId = "Rewarded_Android";
-    string iOSAdUnitId = "Rewarded_iOS";
 
     public UnityEvent OnAdComplete;
 
@@ -24,17 +23,10 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
     void Awake()
     {
-#if UNITY_IOS
-        gameId = iosId;
-#elif UNITY_ANDROID
-        gameId = googleId;
-#endif
 
-#if UNITY_IOS
-        gameAdUnitId = iOSAdUnitId;
-#elif UNITY_ANDROID
+        gameId = googleId;
+
         gameAdUnitId = androidAdUnitId;
-#endif
 
         Advertisement.Initialize(gameId,TestMode, this);
     }

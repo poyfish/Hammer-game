@@ -1,28 +1,27 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Hammer : MonoBehaviour
 {
-    Animator anim;
-    SpriteRenderer sprite;
-    public CameraShake shake;
+    public HammerObject HammerObject;
 
+    public AudioSource HitSoundSource;
 
+    [Foldout("Colliders")]
     public GameObject hammerColliderRight;
+    [Foldout("Colliders")]
     public GameObject hammerColliderLeft;
 
-    public AudioSource hitGround;
-
-    public int cycles;
-    public float force;
-    public float interval;
-
-    bool isMouseRight;
-
-    bool isHammering;
-
+    private bool isMouseRight;
+    private bool isHammering;
+    [HideInInspector]
     public bool isHammeringRight;
+
+    private Animator anim;
+    private SpriteRenderer sprite;
+    private CameraShake shake;
 
 
     void Start()
@@ -30,7 +29,6 @@ public class Hammer : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         shake = FindObjectOfType<CameraShake>();
-
 
         hammerColliderLeft.SetActive(false);
         hammerColliderRight.SetActive(false);
@@ -41,27 +39,20 @@ public class Hammer : MonoBehaviour
         Vector3 mousePosition = Input.mousePosition;
 
         
-        isMouseRight = (mousePosition.x >= Screen.width / 2);
+        isMouseRight = mousePosition.x >= Screen.width / 2;
 
      
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isHammering)
         {
-            if (isMouseRight && !isHammering)
-            {
-                StartCoroutine(ActivateCollider(hammerColliderRight));
-                anim.CrossFade("hammer hammering",0,0);
-                sprite.flipX = true;
+            StartCoroutine(HitGround());
 
-                isHammeringRight = true;
-            }
-            else if(!isMouseRight && !isHammering)
-            {
-                StartCoroutine(ActivateCollider(hammerColliderLeft));
-                anim.CrossFade("hammer hammering", 0, 0);
-                sprite.flipX = false;
+            anim.CrossFade(HammerObject.HammerAnimation.name, 0, 0);
 
-                isHammeringRight = false;
-            }
+            sprite.flipX = isMouseRight;
+
+            isHammeringRight = isMouseRight;
+
+            StartCoroutine(ActivateCollider(isHammeringRight ? hammerColliderRight : hammerColliderLeft));
         }
     }
 
@@ -72,15 +63,21 @@ public class Hammer : MonoBehaviour
 
         isHammering = true;
         colliderObject.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+
+        yield return new WaitForSeconds(HammerObject.Cooldown);
+
         colliderObject.SetActive(false);
+
         anim.CrossFade("hammer idle",0,0);
+
         isHammering = false;
     }
 
-    void HitGround(GameObject colliderObject)
+    IEnumerator HitGround()
     {
-        shake.Shake(cycles, force, interval);
-        hitGround.Play();
+        yield return new WaitForSeconds(0.1f);
+
+        shake.Shake(HammerObject.cycles, HammerObject.force, HammerObject.interval);
+        HitSoundSource.PlayOneShot(HammerObject.HitSound,1);
     }
 }

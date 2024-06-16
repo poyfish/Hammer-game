@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecdf7cf768f8e54fb875da0a12a3113, type: 3}
+  m_Name: default hammer
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 741415356, guid: 3b3d604fd8f216142a9dac67848fee7f, type: 3}
+  HammerAnimation: {fileID: 7400000, guid: 55858f462b5420a4a826c351e840f3fe, type: 2}
+  DeathAnimation: {fileID: 7400000, guid: 60b8e0ee9d6442e4bb894ef008e9e86c, type: 2}
+  Cooldown: 0.1
+  HitSound: {fileID: 8300000, guid: 513dbef493618a540b406cc30841d197, type: 3}
+  cycles: 4
+  force: 0.1
+  interval: 0.005
+  Effect: {fileID: 0}
