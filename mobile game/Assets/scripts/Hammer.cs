@@ -45,8 +45,6 @@ public class Hammer : MonoBehaviour
      
         if (Input.GetMouseButtonDown(0) && !isHammering)
         {
-            StartCoroutine(HitGround());
-
             anim.CrossFade(HammerObject.HammerAnimation.name, 0, 0);
 
             sprite.flipX = isMouseRight;
@@ -74,10 +72,8 @@ public class Hammer : MonoBehaviour
         isHammering = false;
     }
 
-    IEnumerator HitGround()
+    void HitGround()
     {
-        yield return new WaitForSeconds(0.1f);
-
         shake.Shake(HammerObject.cycles, HammerObject.force, HammerObject.interval);
         HitSoundSource.PlayOneShot(HammerObject.HitSound,1);
     }
