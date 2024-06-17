@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Enemy Pool", menuName = "Enemy Pool", order = 99)]
+[CreateAssetMenu(fileName = "New Enemy Pool", menuName = "Enemy Pool", order = 98)]
 public class EnemyPool : ScriptableObject
 {
     [System.Serializable]

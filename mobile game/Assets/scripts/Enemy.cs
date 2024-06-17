@@ -4,42 +4,57 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [HideInInspector]
     public EnemySpawner.EnemyInfo Info;
 
-    Animator anim;
+    private Animator anim;
+    private Hammer hammer;
 
+    [HideInInspector]
     public bool IsDead;
 
-
-    public string squashed_animation_name;
+    [SerializeField]
+    private string squashed_animation_name;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-    }
 
-
-    void Update()
-    {
-       
+        hammer = FindObjectOfType<Hammer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("hammer"))
         {
-            IsDead = true;
+            if (hammer.HammerObject.Effect == null) return;
 
-            Info.rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            Info.coll.enabled = false;
-
-            anim.CrossFade(squashed_animation_name,0,0);
-            Invoke("Destroy", 2f);
+            hammer.HammerObject.Effect.ApplyEffect(this);
         }
     }
 
 
-    private void Destroy()
+    public void Kill()
+    {
+        IsDead = true;
+
+        Info.rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        Info.coll.enabled = false;
+
+        anim.CrossFade(squashed_animation_name, 0, 0);
+        Invoke("Destroy", 2f);
+    }
+
+
+    public void Discard()
+    {
+        foreach (EnemySpawner spawner in FindObjectsOfType<EnemySpawner>())
+        {
+            spawner.DiscardEnemy(Info);
+        }
+    }
+
+    public void Destroy()
     {
         foreach (EnemySpawner spawner in FindObjectsOfType<EnemySpawner>())
         {
