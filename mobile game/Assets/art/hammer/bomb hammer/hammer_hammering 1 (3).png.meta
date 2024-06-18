@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3b3d604fd8f216142a9dac67848fee7f
+guid: 7fb23690d75ce484e83371b6040e9d30
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hammer_hammering 1_0
+      name: hammer_hammering 1 (3)_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 21
-        width: 27
-        height: 34
+        x: 45
+        y: 32
+        width: 21
+        height: 40
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c77af8d0494733c4d93549e3d1fafc06
-      internalID: 741415356
+      spriteID: c980dbfeb1f26ab4f8a886fccae0e259
+      internalID: 1067571480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hammer_hammering 1_1
+      name: hammer_hammering 1 (3)_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 21
-        width: 33
-        height: 37
+        x: 119
+        y: 32
+        width: 26
+        height: 40
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,40 +184,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b31407ec605122e478842ebd1a5d50de
-      internalID: 114717979
+      spriteID: 1d97752f461bc2a40a537c155cc6d791
+      internalID: -1633601276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hammer_hammering 1_2
+      name: hammer_hammering 1 (3)_2
       rect:
         serializedVersion: 2
-        x: 121
-        y: 21
-        width: 35
-        height: 17
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca3ac02182c50784aaea07974334c093
-      internalID: 1685955682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hammer_hammering 1_3
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 21
-        width: 35
+        x: 176
+        y: 34
+        width: 40
         height: 20
       alignment: 8
       pivot: {x: 1, y: 0}
@@ -226,8 +205,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8f632a57f322934f9e88695d6913ed2
-      internalID: -618645230
+      spriteID: f641a5643891ec24799136da6c52c39d
+      internalID: -78038515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer_hammering 1 (3)_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 34
+        width: 41
+        height: 21
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b8e30cbc369874296498eebc5bb9b6
+      internalID: -1669110956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer_hammering 1 (3)_4
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 34
+        width: 37
+        height: 21
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215596dab78c13e44b8d60f92c145a8d
+      internalID: -1290641641
       vertices: []
       indices: 
       edges: []
@@ -243,11 +264,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hammer_hammering 1_0: 741415356
-      hammer_hammering 1_1: 114717979
-      hammer_hammering 1_2: 1685955682
-      hammer_hammering 1_3: -618645230
-      hammer_hammering 1_4: 1862985646
+      hammer_hammering 1 (3)_0: 1067571480
+      hammer_hammering 1 (3)_1: -1633601276
+      hammer_hammering 1 (3)_2: -78038515
+      hammer_hammering 1 (3)_3: -1669110956
+      hammer_hammering 1 (3)_4: -1290641641
+      hammer_hammering 1 (3)_5: 894099270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
