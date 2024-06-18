@@ -13,6 +13,8 @@ public class HammerObject : ScriptableObject
     public AnimationClip HammerAnimation;
     public AnimationClip DeathAnimation;
 
+    public float EdgeRadius;
+
     public float Cooldown;
 
     public AudioClip HitSound;

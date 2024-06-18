@@ -10,9 +10,9 @@ public class Hammer : MonoBehaviour
     public AudioSource HitSoundSource;
 
     [Foldout("Colliders")]
-    public GameObject hammerColliderRight;
+    public CompositeCollider2D hammerColliderRight;
     [Foldout("Colliders")]
-    public GameObject hammerColliderLeft;
+    public CompositeCollider2D hammerColliderLeft;
 
     private bool isMouseRight;
     private bool isHammering;
@@ -31,13 +31,17 @@ public class Hammer : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         shake = FindObjectOfType<CameraShake>();
 
-        hammerColliderLeft.SetActive(false);
-        hammerColliderRight.SetActive(false);
+        hammerColliderLeft.gameObject.SetActive(false);
+        hammerColliderRight.gameObject.SetActive(false);
+
+        anim.CrossFade(HammerObject.IdleAnimation.name, 0, 0);
     }
 
     void Update()
     {
 
+        hammerColliderLeft.edgeRadius = HammerObject.EdgeRadius;
+        hammerColliderRight.edgeRadius = HammerObject.EdgeRadius;
 
         Vector3 mousePosition = Input.mousePosition;
 
@@ -53,23 +57,25 @@ public class Hammer : MonoBehaviour
 
             isHammeringRight = isMouseRight;
 
-            StartCoroutine(ActivateCollider(isHammeringRight ? hammerColliderRight : hammerColliderLeft));
+            //StartCoroutine(ActivateCollider());
         }
     }
 
 
-    IEnumerator ActivateCollider(GameObject colliderObject)
+    IEnumerator ActivateCollider()
     {
-        yield return new WaitForSeconds(0.09f);
+        GameObject colliderObject = isHammeringRight ? hammerColliderRight.gameObject : hammerColliderLeft.gameObject;
 
         isHammering = true;
         colliderObject.SetActive(true);
 
-        yield return new WaitForSeconds(HammerObject.Cooldown);
+        yield return new WaitForSeconds(.1f);
 
         colliderObject.SetActive(false);
 
-        anim.CrossFade("hammer idle",0,0);
+        yield return new WaitForSeconds(HammerObject.Cooldown);
+
+        anim.CrossFade(HammerObject.IdleAnimation.name,0,0);
 
         isHammering = false;
     }
