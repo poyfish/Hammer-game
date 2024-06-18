@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 
-[CreateAssetMenu(fileName = "New Hammer Object", menuName = "Hammer Object", order = 98)]
+[CreateAssetMenu(fileName = "New Hammer Object", menuName = "Hammer Object", order = 99)]
 public class HammerObject : ScriptableObject
 {
     [ShowAssetPreview]

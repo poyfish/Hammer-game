@@ -26,13 +26,16 @@ public class EnemySpawner : MonoBehaviour
 
         public EnemyStats stats;
 
-        public EnemyInfo(GameObject g, Rigidbody2D r, Collider2D c, SpriteRenderer s, EnemyStats es)
+        public bool isRight;
+
+        public EnemyInfo(GameObject g, Rigidbody2D r, Collider2D c, SpriteRenderer s, EnemyStats es, bool ir)
         {
             gameObject = g;
             rb = r;
             coll = c;
             sprite = s;
             stats = es;
+            isRight = ir;
         }
     }
 
@@ -76,7 +79,7 @@ public class EnemySpawner : MonoBehaviour
                 int randomIndex = Random.Range(0, CulledPool.enemies.Length);
                 GameObject enemy = Instantiate(TimePool.enemies[randomIndex].Prefab, transform.position, Quaternion.identity, transform);
 
-                EnemyInfo enemyInfo = new EnemyInfo(enemy, enemy.GetComponent<Rigidbody2D>(), enemy.GetComponent<Collider2D>(), enemy.GetComponent<SpriteRenderer>(), TimePool.enemies[randomIndex]);
+                EnemyInfo enemyInfo = new EnemyInfo(enemy, enemy.GetComponent<Rigidbody2D>(), enemy.GetComponent<Collider2D>(), enemy.GetComponent<SpriteRenderer>(), TimePool.enemies[randomIndex], isSpwanerSpwaningRight);
 
                 SpawnedEnemies.Add(enemyInfo);
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HammerEffect : ScriptableObject
 {
-    public void ApplyEffect(Enemy Target)
+    public virtual void ApplyEffect(Enemy Target)
     {
 
     }
