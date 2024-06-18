@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9b51fd1cd36644a9c5e132e9042ca0, type: 3}
   m_Name: Explode
   m_EditorClassIdentifier: 
-  MinLaunchForce: {x: 10, y: 10}
-  MaxLaunchForce: {x: 14, y: 14}
-  DeathDelay: 1
+  MinLaunchForce: {x: 5, y: 7}
+  MaxLaunchForce: {x: 7, y: 9}
+  MinTorque: -5
+  MaxTorque: 5
+  ExploationRadius: 2
+  EnemyMask:
+    serializedVersion: 2
+    m_Bits: 64

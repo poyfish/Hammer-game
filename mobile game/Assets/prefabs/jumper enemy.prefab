@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6170014564275699478}
   - component: {fileID: 8793009503190316897}
   - component: {fileID: 2261152112899358248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: jumper enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -175,6 +175,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDead: 0
   squashed_animation_name: jumping_enemy_squashed
+  GroundMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!95 &8793009503190316897
 Animator:
   serializedVersion: 5

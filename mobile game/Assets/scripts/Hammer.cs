@@ -37,6 +37,8 @@ public class Hammer : MonoBehaviour
 
     void Update()
     {
+
+
         Vector3 mousePosition = Input.mousePosition;
 
         

@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private string squashed_animation_name;
 
+    public LayerMask GroundMask;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -31,6 +33,12 @@ public class Enemy : MonoBehaviour
 
             hammer.HammerObject.Effect.ApplyEffect(this);
         }
+    }
+
+
+    public bool IsGrounded()
+    {
+        return Physics2D.BoxCast(Info.coll.bounds.center, Info.coll.bounds.size / 1.1f, 0f, Vector2.down, .1f, GroundMask);
     }
 
 

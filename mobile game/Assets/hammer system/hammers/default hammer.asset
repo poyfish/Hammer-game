@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ecdf7cf768f8e54fb875da0a12a3113, type: 3}
   m_Name: default hammer
   m_EditorClassIdentifier: 
-  Icon: {fileID: 741415356, guid: 3b3d604fd8f216142a9dac67848fee7f, type: 3}
+  Icon: {fileID: 946478735, guid: fbbbc24969372a84c9674ea0d9940507, type: 3}
+  IdleAnimation: {fileID: 7400000, guid: e6425e07f17abb64da6c2cbfac3f3990, type: 2}
   HammerAnimation: {fileID: 7400000, guid: 55858f462b5420a4a826c351e840f3fe, type: 2}
   DeathAnimation: {fileID: 7400000, guid: 60b8e0ee9d6442e4bb894ef008e9e86c, type: 2}
   Cooldown: 0.1
@@ -20,4 +21,4 @@ MonoBehaviour:
   cycles: 4
   force: 0.1
   interval: 0.005
-  Effect: {fileID: 11400000, guid: e62e661a96eff7848b8c2e6a29a20fcf, type: 2}
+  Effect: {fileID: 11400000, guid: 93bcca50438764f47a06245ca1fa2ae3, type: 2}

@@ -9,6 +9,7 @@ public class HammerObject : ScriptableObject
     [ShowAssetPreview]
     public Sprite Icon;
 
+    public AnimationClip IdleAnimation;
     public AnimationClip HammerAnimation;
     public AnimationClip DeathAnimation;
 
