@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,23 @@ public class ExplodeEffect : HammerEffect
 
     public LayerMask EnemyMask;
 
+    [Foldout("Shake Settings")]
+    public int cycles;
+    [Foldout("Shake Settings")]
+    public float force;
+    [Foldout("Shake Settings")]
+    public float interval;
+
+    private CameraShake shake;
+
+
     public override void ApplyEffect(Enemy Target)
     {
+        if(shake == null) 
+        {
+            shake = FindObjectOfType<CameraShake>();
+        }
+
         Target.Discard();
 
         Vector2 LaunchForceMin = MaxLaunchForce;
@@ -44,6 +60,8 @@ public class ExplodeEffect : HammerEffect
         {
             hit.collider.gameObject.GetComponent<Enemy>().Kill();
         }
+
+        shake.Shake(cycles, force, interval);
     }
 
 }
