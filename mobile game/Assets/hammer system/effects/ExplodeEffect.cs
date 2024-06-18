@@ -14,6 +14,10 @@ public class ExplodeEffect : HammerEffect
 
     public LayerMask EnemyMask;
 
+    public AudioClip ExplosionSound;
+    [Range(0f, 1f)]
+    public float ExplosionSoundVolume;
+
     [Foldout("Shake Settings")]
     public int cycles;
     [Foldout("Shake Settings")]
@@ -62,6 +66,8 @@ public class ExplodeEffect : HammerEffect
         }
 
         shake.Shake(cycles, force, interval);
+
+        Target.GetComponent<AudioSource>().PlayOneShot(ExplosionSound, ExplosionSoundVolume);
     }
 
 }

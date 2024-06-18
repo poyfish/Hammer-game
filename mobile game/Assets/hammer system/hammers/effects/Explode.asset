@@ -18,6 +18,8 @@ MonoBehaviour:
   EnemyMask:
     serializedVersion: 2
     m_Bits: 64
+  ExplosionSound: {fileID: 8300000, guid: de4ba2276cf2b8440ad82036a9341c81, type: 3}
+  ExplosionSoundVolume: 0.5
   cycles: 4
   force: 0.3
   interval: 0.005
