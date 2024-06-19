@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int ScoreRewardMin;
+    public int ScoreRewardMax;
+
     [HideInInspector]
     public EnemySpawner.EnemyInfo Info;
 
@@ -18,11 +21,15 @@ public class Enemy : MonoBehaviour
 
     public LayerMask GroundMask;
 
+    private ScoreManager scoreManager;
+
     void Start()
     {
         anim = GetComponent<Animator>();
 
         hammer = FindObjectOfType<Hammer>();
+
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,6 +52,8 @@ public class Enemy : MonoBehaviour
     public void Kill()
     {
         IsDead = true;
+
+        scoreManager.AddScore(Random.Range(ScoreRewardMin, ScoreRewardMax));
 
         Info.rb.constraints = RigidbodyConstraints2D.FreezeAll;
         Info.coll.enabled = false;

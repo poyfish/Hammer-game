@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd03cacad618ff448483be712fe3a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreRewardMin: 5
+  ScoreRewardMax: 3
   IsDead: 0
   squashed_animation_name: tornado_enemy_squashed
   GroundMask:
