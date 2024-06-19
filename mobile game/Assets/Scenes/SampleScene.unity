@@ -1248,7 +1248,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1023021153}
   - component: {fileID: 1023021154}
-  - component: {fileID: 1023021155}
   m_Layer: 0
   m_Name: Score manager
   m_TagString: Untagged
@@ -1264,7 +1263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023021152}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1285,18 +1284,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: 0
   SaveMode: 1
---- !u!114 &1023021155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023021152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12211e67c790a0644b71a310553b0002, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1060593084
 GameObject:
   m_ObjectHideFlags: 0

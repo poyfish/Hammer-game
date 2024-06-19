@@ -24,6 +24,9 @@ public class Hammer : MonoBehaviour
     private SpriteRenderer sprite;
     private CameraShake shake;
 
+    [HideInInspector]
+    public int HitCounter;
+
 
     void Start()
     {
@@ -55,9 +58,9 @@ public class Hammer : MonoBehaviour
 
             sprite.flipX = isMouseRight;
 
-            isHammeringRight = isMouseRight;
+            HitCounter++;
 
-            //StartCoroutine(ActivateCollider());
+            isHammeringRight = isMouseRight;
         }
     }
 

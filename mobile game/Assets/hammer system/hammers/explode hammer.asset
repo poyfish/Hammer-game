@@ -22,4 +22,4 @@ MonoBehaviour:
   cycles: 4
   force: 0.2
   interval: 0.005
-  Effect: {fileID: 11400000, guid: 93bcca50438764f47a06245ca1fa2ae3, type: 2}
+  Effect: {fileID: 11400000, guid: 24d309fbed13d6a4e8e57e512b3a5705, type: 2}
