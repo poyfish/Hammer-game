@@ -53,6 +53,8 @@ public class Enemy : MonoBehaviour
     {
         IsDead = true;
 
+        transform.position = new Vector3(transform.position.x, -0.8f);
+
         scoreManager.AddScore(Random.Range(ScoreRewardMin, ScoreRewardMax));
 
         Info.rb.constraints = RigidbodyConstraints2D.FreezeAll;

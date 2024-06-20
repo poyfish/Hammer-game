@@ -25,6 +25,10 @@ public class ExplodeEffect : HammerEffect
     [Foldout("Shake Settings")]
     public float interval;
 
+    public GameObject Explosion;
+
+    public float ExplosionYOffset;
+
     private CameraShake shake;
 
 
@@ -58,6 +62,8 @@ public class ExplodeEffect : HammerEffect
 
         Target.Kill();
 
+        Target.Info.sprite.enabled = false;
+
         RaycastHit2D[] hits = Physics2D.CircleCastAll(Target.transform.position, ExploationRadius, Vector2.zero, 0, EnemyMask);
 
         foreach (RaycastHit2D hit in hits)
@@ -66,6 +72,10 @@ public class ExplodeEffect : HammerEffect
         }
 
         shake.Shake(cycles, force, interval);
+
+        var explosion = Instantiate(Explosion);
+
+        explosion.transform.position = Target.transform.position + new Vector3(0,ExplosionYOffset);
 
         Target.GetComponent<AudioSource>().PlayOneShot(ExplosionSound, ExplosionSoundVolume);
     }

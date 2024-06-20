@@ -25,7 +25,6 @@ public class JumpingEnemy : MonoBehaviour
     {
         if (enemy.IsDead)
         {
-            transform.position = new Vector3(transform.position.x, -0.8f);
             return;
         }
 

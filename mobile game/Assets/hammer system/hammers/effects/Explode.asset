@@ -23,3 +23,5 @@ MonoBehaviour:
   cycles: 4
   force: 0.3
   interval: 0.005
+  Explosion: {fileID: 5379984965539347635, guid: b30d401e7b995544199995b92985058a, type: 3}
+  ExplosionYOffset: 0.4
