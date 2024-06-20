@@ -90,4 +90,11 @@ public class Hammer : MonoBehaviour
         shake.Shake(HammerObject.cycles, HammerObject.force, HammerObject.interval);
         HitSoundSource.PlayOneShot(HammerObject.HitSound,1);
     }
+
+    public void ChangeHammer(HammerObject hammer)
+    {
+        HammerObject = hammer;
+
+        anim.CrossFade(HammerObject.IdleAnimation.name, 0, 0);
+    }
 }
