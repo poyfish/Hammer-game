@@ -16,6 +16,7 @@ MonoBehaviour:
   IdleAnimation: {fileID: 7400000, guid: e6425e07f17abb64da6c2cbfac3f3990, type: 2}
   HammerAnimation: {fileID: 7400000, guid: 55858f462b5420a4a826c351e840f3fe, type: 2}
   DeathAnimation: {fileID: 7400000, guid: 60b8e0ee9d6442e4bb894ef008e9e86c, type: 2}
+  EdgeRadius: 0
   Cooldown: 0.1
   HitSound: {fileID: 8300000, guid: 513dbef493618a540b406cc30841d197, type: 3}
   cycles: 4

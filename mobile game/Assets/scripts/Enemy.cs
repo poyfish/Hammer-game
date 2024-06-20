@@ -73,10 +73,7 @@ public class Enemy : MonoBehaviour
 
     public void Destroy()
     {
-        foreach (EnemySpawner spawner in FindObjectsOfType<EnemySpawner>())
-        {
-            spawner.DiscardEnemy(Info);
-        }
+        Discard();
 
         Destroy(this.gameObject);    
     }

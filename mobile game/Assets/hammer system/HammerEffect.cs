@@ -8,4 +8,9 @@ public class HammerEffect : ScriptableObject
     {
 
     }
+
+    public virtual void OnHit(Hammer hammer)
+    {
+
+    }
 }

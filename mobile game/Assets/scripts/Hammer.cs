@@ -56,6 +56,8 @@ public class Hammer : MonoBehaviour
         {
             anim.CrossFade(HammerObject.HammerAnimation.name, 0, 0);
 
+            if(HammerObject.Effect != null) HammerObject.Effect.OnHit(this);
+
             sprite.flipX = isMouseRight;
 
             HitCounter++;
