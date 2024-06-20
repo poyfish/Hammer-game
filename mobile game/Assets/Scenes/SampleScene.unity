@@ -894,6 +894,7 @@ MonoBehaviour:
   hammerColliderLeft: {fileID: 1501923554}
   isHammeringRight: 0
   anim: {fileID: 0}
+  HitCounter: 0
 --- !u!82 &822391138
 AudioSource:
   m_ObjectHideFlags: 0
