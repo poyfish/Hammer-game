@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dccc4131e2586449834235f835cd47d, type: 3}
   m_Name: shockwave
   m_EditorClassIdentifier: 
+  spawnY: -1.09
+  spawnOffsetX: 5.5
+  OffsetBetweenSpawns: 1.5
+  TimeBetweenSpawns: 0.08
+  SpikeAmount: 7
+  Spike: {fileID: 1104255192902711737, guid: d718e2162077add43bb3e4c375ed1ae6, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecdf7cf768f8e54fb875da0a12a3113, type: 3}
+  m_Name: shockwave hammer
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 1067571480, guid: 7fb23690d75ce484e83371b6040e9d30, type: 3}
+  IdleAnimation: {fileID: 7400000, guid: ba181c6d089666049a6f341d92e768bd, type: 2}
+  HammerAnimation: {fileID: 7400000, guid: c60eae21bc0cac44ca16c87f2fd71ffc, type: 2}
+  DeathAnimation: {fileID: 7400000, guid: 6185bd4bd819b194d8f860bfb30ac637, type: 2}
+  EdgeRadius: 0.4
+  Cooldown: 0.3
+  HitSound: {fileID: 8300000, guid: 513dbef493618a540b406cc30841d197, type: 3}
+  cycles: 4
+  force: 0.2
+  interval: 0.005
+  Effect: {fileID: 11400000, guid: 24d309fbed13d6a4e8e57e512b3a5705, type: 2}
