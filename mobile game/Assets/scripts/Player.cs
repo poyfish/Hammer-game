@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     SpriteRenderer sprite;
 
     Animator anim;
+
+    public string MenuSceneName;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -45,6 +47,13 @@ public class Player : MonoBehaviour
     public void OnDeath()
     {
         sprite.enabled = false;
+
+        Invoke("TransitionToMenu", .5f);
+    }
+
+    public void TransitionToMenu()
+    {
+        FindObjectOfType<ScenesManager>().GoToSceneFade(MenuSceneName);
     }
 
     public void RestartScene()

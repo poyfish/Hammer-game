@@ -28,7 +28,7 @@ public class Hammer : MonoBehaviour
     public int HitCounter;
 
 
-    void Start()
+    void Awake()
     {
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();

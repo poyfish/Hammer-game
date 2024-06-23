@@ -7,7 +7,12 @@ public class ScoreDisplay : MonoBehaviour
 {
     public TextMeshProUGUI Text;
 
-    public ScoreManager ScoreManager;
+    private ScoreManager ScoreManager;
+
+    private void Start()
+    {
+        ScoreManager = FindObjectOfType<ScoreManager>();
+    }
 
     void Update()
     {
