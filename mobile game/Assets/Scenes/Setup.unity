@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 0
-  SaveMode: 0
+  SaveMode: 1
 --- !u!1 &2089345054
 GameObject:
   m_ObjectHideFlags: 0
