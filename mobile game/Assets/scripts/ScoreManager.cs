@@ -45,7 +45,7 @@ public class ScoreManager : MonoBehaviour
     [Button("delete data")]
     public void ClearSaveData()
     {
-        PlayerPrefs.DeleteKey(ScoreKey);
+        PlayerPrefs.DeleteAll();
 
         Score = 0;
     }
