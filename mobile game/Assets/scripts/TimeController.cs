@@ -27,6 +27,11 @@ public class TimeController : MonoBehaviour
 
                 anim.speed = 0;
             }
+
+            foreach (Enemy enemy in FindObjectsOfType<Enemy>())
+            {
+                enemy.IsDead = true;
+            }
         }
     }
 }
