@@ -15,6 +15,6 @@ public class HammerSetter : MonoBehaviour
 
     public void SetHammer(HammerObject hammer)
     {
-        hammerManager.CurrentHammer = hammer;
+        hammerManager.SwitchHammer(hammer);
     }
 }

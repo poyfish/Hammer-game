@@ -421,7 +421,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729343011}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -508,7 +508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fade: {fileID: 729343013}
-  FadeTime: 1
+  FadeTime: 2
+  TransitionDelay: 0.7
 --- !u!1 &1559860405
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +696,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1139046835}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: GoToSceneFadeOut
+        m_MethodName: GoToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -844,7 +845,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308a6caa24bc9b648ad15681b2c3b918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHammer: {fileID: 11400000, guid: 43e23f58807f4fa43906fd32eccb451d, type: 2}
+  DefaultHammer: {fileID: 11400000, guid: 43e23f58807f4fa43906fd32eccb451d, type: 2}
+  Hammers:
+  - {fileID: 11400000, guid: 43e23f58807f4fa43906fd32eccb451d, type: 2}
+  - {fileID: 11400000, guid: 0693e153f38ca7f43bb55fef8e34aecb, type: 2}
+  CurrentHammer: {fileID: 0}
+  CurrentHammerSaveKey: current hammer
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

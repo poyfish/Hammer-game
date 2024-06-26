@@ -7,6 +7,7 @@ public class ScenesManager : MonoBehaviour
 {
     public Animator Fade;
     public float FadeTime;
+    public float TransitionDelay;
 
     string nextScene;
 
@@ -21,12 +22,12 @@ public class ScenesManager : MonoBehaviour
 
         Fade.speed = FadeTime;
 
-        Fade.CrossFade("FadeIn", 0, 0);
+        FadeIn();
 
-        Invoke("GoToScene", FadeTime);
+        Invoke("GoToScene", TransitionDelay);
     }
 
-    public void GoToSceneFadeOut(string SceneName)
+    public void GoToScene(string SceneName)
     {
         nextScene = SceneName;
 
@@ -42,6 +43,16 @@ public class ScenesManager : MonoBehaviour
 
     public void OnSceneChange(Scene current, Scene next)
     {
-        Fade.CrossFade("FadeOut",0,0);
+        Invoke("FadeOut", .05f);
+    }
+
+    public void FadeOut()
+    {
+        Fade.CrossFade("FadeOut", 0, 0);
+    }
+
+    public void FadeIn()
+    {
+        Fade.CrossFade("FadeIn", 0, 0);
     }
 }

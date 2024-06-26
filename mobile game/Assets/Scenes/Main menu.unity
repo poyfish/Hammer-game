@@ -1361,7 +1361,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: hammers
+  m_text: 'shop
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9cd2b5343b84114db82f006f3c57843, type: 2}
   m_sharedMaterial: {fileID: -3396393371690536236, guid: e9cd2b5343b84114db82f006f3c57843, type: 2}
