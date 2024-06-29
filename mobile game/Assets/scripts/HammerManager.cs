@@ -34,8 +34,6 @@ public class HammerManager : MonoBehaviour
     {
         CurrentHammer = hammer;
 
-        print(hammer.name);
-
         PlayerPrefs.SetString(CurrentHammerSaveKey, hammer.name);
         PlayerPrefs.Save();
     }

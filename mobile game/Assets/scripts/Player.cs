@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -11,7 +12,9 @@ public class Player : MonoBehaviour
 
     Animator anim;
 
-    public string MenuSceneName;
+    public UnityEvent OnPlayerDeath;
+    public float DeathEventDelay;
+
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -48,16 +51,11 @@ public class Player : MonoBehaviour
     {
         sprite.enabled = false;
 
-        Invoke("TransitionToMenu", .5f);
+        Invoke("InvokeDeathEvent", DeathEventDelay);
     }
 
-    public void TransitionToMenu()
+    void InvokeDeathEvent()
     {
-        FindObjectOfType<ScenesManager>().GoToSceneFade(MenuSceneName);
-    }
-
-    public void RestartScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        OnPlayerDeath.Invoke();
     }
 }
