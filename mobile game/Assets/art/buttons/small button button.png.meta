@@ -140,9 +140,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 36
-        y: 46
+        y: 54
         width: 48
-        height: 29
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c82c2aaae533904ea857a3b887a0883
-      internalID: -688681403
+      spriteID: 0042f89e73991b846a78f08bf0051f52
+      internalID: -1677753210
       vertices: []
       indices: 
       edges: []
@@ -160,10 +160,10 @@ TextureImporter:
       name: small button button_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 46
-        width: 48
-        height: 25
+        x: 153
+        y: 56
+        width: 54
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,8 +171,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5edec4153b6f44749bab49659244ea1e
-      internalID: -131057378
+      spriteID: b3fbe4adeb878ac4ab5b7b010aa1278d
+      internalID: 944370091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small button button_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 53
+        width: 48
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e38765e3fa35f4c92b95efe704dd8d
+      internalID: 2014587540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small button button_3
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 53
+        width: 64
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9244c8752b4ebe44a76c0ebe5f13add
+      internalID: 1483183705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small button button_4
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 53
+        width: 48
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef355c466ddb9584a8c31272cdec8247
+      internalID: 73390190
       vertices: []
       indices: 
       edges: []
@@ -188,8 +251,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      small button button_0: -688681403
-      small button button_1: -131057378
+      small button button_0: -1677753210
+      small button button_1: 944370091
+      small button button_2: 2014587540
+      small button button_3: 1483183705
+      small button button_4: 73390190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

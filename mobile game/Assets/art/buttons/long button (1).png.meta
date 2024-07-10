@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c21b7246053097a4d8047f581ff18831
+guid: eac06287538af5346a4dd3b3e518648c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,33 +136,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: long button_0
+      name: long button (1)_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 46
-        width: 82
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9c5124d0bd58314b8ab8ca8385045f8
-      internalID: -1065383259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: long button_1
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 46
-        width: 82
+        x: 17
+        y: 48
+        width: 86
         height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea309dfb5795a794da2b754daf5f3359
-      internalID: -1823270248
+      spriteID: 037a7407e07ae894bb51c1fb2b02a915
+      internalID: 1934392843
       vertices: []
       indices: 
       edges: []
@@ -188,8 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      long button_0: -1065383259
-      long button_1: -1823270248
+      long button (1)_0: 1934392843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
