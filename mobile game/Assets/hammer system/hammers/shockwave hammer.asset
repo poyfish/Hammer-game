@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ecdf7cf768f8e54fb875da0a12a3113, type: 3}
   m_Name: shockwave hammer
   m_EditorClassIdentifier: 
-  Icon: {fileID: 1067571480, guid: 7fb23690d75ce484e83371b6040e9d30, type: 3}
-  IdleAnimation: {fileID: 7400000, guid: ba181c6d089666049a6f341d92e768bd, type: 2}
-  HammerAnimation: {fileID: 7400000, guid: c60eae21bc0cac44ca16c87f2fd71ffc, type: 2}
+  Icon: {fileID: -772270204, guid: d941b5e7417ca4340875e319903a9370, type: 3}
+  IdleAnimation: {fileID: 7400000, guid: d8159a4ee77acb04f8a71fdcba6b6ba8, type: 2}
+  HammerAnimation: {fileID: 7400000, guid: 49ab651cb44c54e41add0a6ca3ffe9e8, type: 2}
   DeathAnimation: {fileID: 7400000, guid: 6185bd4bd819b194d8f860bfb30ac637, type: 2}
   EdgeRadius: 0.4
   Cooldown: 0.3

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d1b4088b1d768947a445da292a5d3ea
+guid: d941b5e7417ca4340875e319903a9370
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -134,7 +134,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hammer_hammering_spike 1_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 37
+        width: 28
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dec764f82e8c424aa5286147cc89d56
+      internalID: -772270204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer_hammering_spike 1_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 37
+        width: 31
+        height: 40
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb052ec564f9ddb478e09d73664bb189
+      internalID: -873347865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer_hammering_spike 1_2
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 44
+        width: 40
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81c4c26fa9654f41b35c983566bd7b5
+      internalID: 1741078411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer_hammering_spike 1_3
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 44
+        width: 40
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c3aa2539209ab4fb813072ce1faf6a
+      internalID: -842684718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +229,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hammer_hammering_spike 1_0: -772270204
+      hammer_hammering_spike 1_1: -873347865
+      hammer_hammering_spike 1_2: 1741078411
+      hammer_hammering_spike 1_3: -842684718
+      hammer_hammering_spike 1_4: -1381236204
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
