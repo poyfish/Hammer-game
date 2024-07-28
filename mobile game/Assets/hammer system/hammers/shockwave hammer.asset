@@ -15,9 +15,9 @@ MonoBehaviour:
   Icon: {fileID: -772270204, guid: d941b5e7417ca4340875e319903a9370, type: 3}
   IdleAnimation: {fileID: 7400000, guid: d8159a4ee77acb04f8a71fdcba6b6ba8, type: 2}
   HammerAnimation: {fileID: 7400000, guid: 49ab651cb44c54e41add0a6ca3ffe9e8, type: 2}
-  DeathAnimation: {fileID: 7400000, guid: 6185bd4bd819b194d8f860bfb30ac637, type: 2}
+  DeathAnimation: {fileID: 7400000, guid: e02d737602ce4af4d89c8908e32798db, type: 2}
   EdgeRadius: 0.4
-  Cooldown: 0.3
+  Cooldown: 0.2
   HitSound: {fileID: 8300000, guid: 513dbef493618a540b406cc30841d197, type: 3}
   cycles: 4
   force: 0.2
