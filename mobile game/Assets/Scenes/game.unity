@@ -1793,7 +1793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83de9ca025b3674db25706d6c9e9feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HammerObject: {fileID: 11400000, guid: 43e23f58807f4fa43906fd32eccb451d, type: 2}
+  HammerObject: {fileID: 11400000, guid: ba46510b43ce4c64abf08ad00fb34db1, type: 2}
   HitSoundSource: {fileID: 822391138}
   hammerColliderRight: {fileID: 895729202}
   hammerColliderLeft: {fileID: 1501923554}
