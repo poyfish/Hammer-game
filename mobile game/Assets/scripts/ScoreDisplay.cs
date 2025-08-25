@@ -7,15 +7,8 @@ public class ScoreDisplay : MonoBehaviour
 {
     public TextMeshProUGUI Text;
 
-    private ScoreManager ScoreManager;
-
-    private void Start()
-    {
-        ScoreManager = FindObjectOfType<ScoreManager>();
-    }
-
     void Update()
     {
-        Text.text = ScoreManager.Score.ToString();
+        Text.text = Systems.ScoreManager.Score.ToString();
     }
 }

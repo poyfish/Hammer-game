@@ -11,7 +11,7 @@ public class ScenesManager : MonoBehaviour
 
     string nextScene;
 
-    private void Awake()
+    private void Start()
     {
         SceneManager.activeSceneChanged += OnSceneChange;
     }

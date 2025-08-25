@@ -8,6 +8,6 @@ public class SceneSwitcher : MonoBehaviour
 
     public void SwitchScene()
     {
-        FindObjectOfType<ScenesManager>().GoToSceneFade(SceneName);
+        Systems.ScenesManager.GoToSceneFade(SceneName);
     }
 }
