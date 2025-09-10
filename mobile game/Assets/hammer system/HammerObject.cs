@@ -9,6 +9,7 @@ public class HammerObject : ScriptableObject
     [ShowAssetPreview]
     public Sprite Icon;
 
+    public bool HandlesHammerDownAnimation;
     public AnimationClip IdleAnimation;
     public AnimationClip HammerAnimation;
     public AnimationClip DeathAnimation;
@@ -27,4 +28,6 @@ public class HammerObject : ScriptableObject
     public float interval;
 
     public HammerEffect Effect;
+
+    public virtual bool IsSpecial => false;
 }

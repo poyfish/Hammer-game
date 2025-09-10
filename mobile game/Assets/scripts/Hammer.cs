@@ -1,6 +1,7 @@
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 
 public class Hammer : MonoBehaviour
@@ -28,6 +29,7 @@ public class Hammer : MonoBehaviour
     public int HitCounter;
 
 
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -42,27 +44,56 @@ public class Hammer : MonoBehaviour
 
     void Update()
     {
+        Vector3 mousePosition = Input.mousePosition;
+    
+        isMouseRight = mousePosition.x >= Screen.width / 2;
 
+
+        if (HammerObject.IsSpecial)
+        {
+            HandleSpecialHammer();
+        }
+        else
+        {
+            HandleHammer();
+        }
+    }
+    private void HandleHammer()
+    {
         hammerColliderLeft.edgeRadius = HammerObject.EdgeRadius;
         hammerColliderRight.edgeRadius = HammerObject.EdgeRadius;
 
-        Vector3 mousePosition = Input.mousePosition;
-
-        
-        isMouseRight = mousePosition.x >= Screen.width / 2;
-
-     
         if (Input.GetMouseButtonDown(0) && !isHammering)
         {
             anim.CrossFade(HammerObject.HammerAnimation.name, 0, 0);
 
-            if(HammerObject.Effect != null) HammerObject.Effect.OnHit(this);
+            if (HammerObject.Effect != null) HammerObject.Effect.OnHit(this);
 
             sprite.flipX = isMouseRight;
 
             HitCounter++;
 
             isHammeringRight = isMouseRight;
+        }
+    }
+
+    private Timer timer = new Timer(2000);
+
+    private void HandleSpecialHammer()
+    {
+        hammerColliderLeft.edgeRadius = HammerObject.EdgeRadius;
+        hammerColliderRight.edgeRadius = HammerObject.EdgeRadius;
+        if (Input.GetMouseButtonDown(0) && !isHammering)
+        {
+            timer.Start();
+        }
+        if (Input.GetMouseButtonUp(0) && !isHammering)
+        {
+            timer.Stop();
+            if (timer.)
+            {
+
+            }
         }
     }
 

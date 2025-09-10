@@ -9,7 +9,7 @@ public class HammerEffect : ScriptableObject
 
     }
 
-    public virtual void OnHit(Hammer hammer)
+    public virtual void OnHit(Hammer hammer) // called when the hammer is used (I think)
     {
 
     }
