@@ -9,16 +9,24 @@ public class HammerObject : ScriptableObject
     [ShowAssetPreview]
     public Sprite Icon;
 
+    public bool IsSpecial;
+
     public bool HandlesHammerDownAnimation;
     public AnimationClip IdleAnimation;
     public AnimationClip HammerAnimation;
     public AnimationClip DeathAnimation;
+    
+    [ShowIf("IsSpecial")]
+    public AnimationClip SpecialAbilityChargeUpAnimation;
+    [ShowIf("IsSpecial")]
+    public AnimationClip SpecialAbilityChargeHammerAnimation;
 
     public float EdgeRadius;
 
     public float Cooldown;
 
     public AudioClip HitSound;
+
 
     [Foldout("Shake Settings")]
     public int cycles;
@@ -27,7 +35,11 @@ public class HammerObject : ScriptableObject
     [Foldout("Shake Settings")]
     public float interval;
 
-    public HammerEffect Effect;
 
-    public virtual bool IsSpecial => false;
+    [Foldout("Special Ability Settings"), ShowIf("IsSpecial")]
+    public float specialAbilityChargeUpTime;
+
+    public HammerEffect Effect;
+    [ShowIf("IsSpecial")]
+    public HammerEffect SpecialEffect;
 }

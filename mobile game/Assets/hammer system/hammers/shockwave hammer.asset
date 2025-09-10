@@ -13,13 +13,19 @@ MonoBehaviour:
   m_Name: shockwave hammer
   m_EditorClassIdentifier: 
   Icon: {fileID: -772270204, guid: d941b5e7417ca4340875e319903a9370, type: 3}
+  IsSpecial: 1
+  HandlesHammerDownAnimation: 0
   IdleAnimation: {fileID: 7400000, guid: d8159a4ee77acb04f8a71fdcba6b6ba8, type: 2}
   HammerAnimation: {fileID: 7400000, guid: 49ab651cb44c54e41add0a6ca3ffe9e8, type: 2}
   DeathAnimation: {fileID: 7400000, guid: e02d737602ce4af4d89c8908e32798db, type: 2}
+  SpecialAbilityChargeUpAnimation: {fileID: 7400000, guid: 21e4392b63cebd9449e4e35d7ba4d749, type: 2}
+  SpecialAbilityChargeHammerAnimation: {fileID: 0}
   EdgeRadius: 0.4
   Cooldown: 0.2
   HitSound: {fileID: 8300000, guid: 513dbef493618a540b406cc30841d197, type: 3}
   cycles: 4
   force: 0.2
   interval: 0.005
-  Effect: {fileID: 11400000, guid: 24d309fbed13d6a4e8e57e512b3a5705, type: 2}
+  specialAbilityChargeUpTime: 0
+  Effect: {fileID: 11400000, guid: e62e661a96eff7848b8c2e6a29a20fcf, type: 2}
+  SpecialEffect: {fileID: 11400000, guid: 24d309fbed13d6a4e8e57e512b3a5705, type: 2}

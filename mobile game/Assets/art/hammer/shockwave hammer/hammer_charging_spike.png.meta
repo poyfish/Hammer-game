@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d941b5e7417ca4340875e319903a9370
+guid: 02dcdc98bcad4e441ac2c4bf02c84a79
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,7 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -132,102 +132,89 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 16384
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hammer_hammering_spike 1_0
+      name: hammer_charging_spike_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 37
-        width: 28
-        height: 41
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        x: 47
+        y: 113
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dec764f82e8c424aa5286147cc89d56
-      internalID: -772270204
+      spriteID: bac90a04b5832ec41b50d999e5c1c762
+      internalID: 1253627023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hammer_hammering_spike 1_1
+      name: hammer_charging_spike_1
       rect:
         serializedVersion: 2
-        x: 161
-        y: 37
-        width: 31
-        height: 40
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        x: 287
+        y: 113
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb052ec564f9ddb478e09d73664bb189
-      internalID: -873347865
+      spriteID: 4f19f7596b3e6bc4d8698b80c288dec9
+      internalID: -823449769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hammer_hammering_spike 1_2
+      name: hammer_charging_spike_2
       rect:
         serializedVersion: 2
-        x: 269
-        y: 44
-        width: 40
-        height: 33
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        x: 407
+        y: 113
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c81c4c26fa9654f41b35c983566bd7b5
-      internalID: 1741078411
+      spriteID: ef80dc8cade25834989fad6a7e272877
+      internalID: -173674074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hammer_hammering_spike 1_3
+      name: hammer_charging_spike_4
       rect:
         serializedVersion: 2
-        x: 389
-        y: 44
-        width: 40
-        height: 33
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        x: 167
+        y: 113
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67c3aa2539209ab4fb813072ce1faf6a
-      internalID: -842684718
+      spriteID: 6ae382b5edeb5b449b56a58eb173d70d
+      internalID: -352856530
       vertices: []
       indices: 
       edges: []
@@ -243,11 +230,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hammer_hammering_spike 1_0: -772270204
-      hammer_hammering_spike 1_1: -873347865
-      hammer_hammering_spike 1_2: 1741078411
-      hammer_hammering_spike 1_3: -842684718
-      hammer_hammering_spike 1_4: -1381236204
+      hammer_charging_spike_0: 1253627023
+      hammer_charging_spike_1: -823449769
+      hammer_charging_spike_2: -173674074
+      hammer_charging_spike_3: 2090384081
+      hammer_charging_spike_4: -352856530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,7 +1,6 @@
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
-using System.Timers;
 using UnityEngine;
 
 public class Hammer : MonoBehaviour
@@ -28,7 +27,7 @@ public class Hammer : MonoBehaviour
     [HideInInspector]
     public int HitCounter;
 
-
+    private bool isUsingSpecialAttack;
 
     void Awake()
     {
@@ -77,25 +76,37 @@ public class Hammer : MonoBehaviour
         }
     }
 
-    private Timer timer = new Timer(2000);
+    float SpecialChargeUpTimer;
 
     private void HandleSpecialHammer()
     {
         hammerColliderLeft.edgeRadius = HammerObject.EdgeRadius;
         hammerColliderRight.edgeRadius = HammerObject.EdgeRadius;
+
+        SpecialChargeUpTimer += Time.deltaTime;
+
         if (Input.GetMouseButtonDown(0) && !isHammering)
         {
-            timer.Start();
+            SpecialChargeUpTimer = 0;
         }
+
+
         if (Input.GetMouseButtonUp(0) && !isHammering)
         {
-            timer.Stop();
-            if (timer.)
-            {
+            anim.CrossFade(HammerObject.SpecialAbilityChargeUpAnimation.name, 0, 0);
 
+            if (SpecialChargeUpTimer < HammerObject.specialAbilityChargeUpTime)
+            {
+                print("regular hit");
+            }
+            else
+            {
+                print("special hit");
             }
         }
     }
+
+    
 
 
     IEnumerator ActivateCollider()
