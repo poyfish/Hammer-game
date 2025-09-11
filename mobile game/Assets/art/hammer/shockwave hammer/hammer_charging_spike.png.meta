@@ -139,12 +139,12 @@ TextureImporter:
       name: hammer_charging_spike_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 113
-        width: 50
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 46
+        y: 37
+        width: 28
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: hammer_charging_spike_1
       rect:
         serializedVersion: 2
-        x: 287
-        y: 113
-        width: 50
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 166
+        y: 37
+        width: 28
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: hammer_charging_spike_2
       rect:
         serializedVersion: 2
-        x: 407
-        y: 113
-        width: 50
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 286
+        y: 37
+        width: 28
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: hammer_charging_spike_4
       rect:
         serializedVersion: 2
-        x: 167
-        y: 113
-        width: 50
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 526
+        y: 37
+        width: 28
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,6 +215,48 @@ TextureImporter:
       bones: []
       spriteID: 6ae382b5edeb5b449b56a58eb173d70d
       internalID: -352856530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer_charging_spike_3
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 37
+        width: 28
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f732b34721327c24bbbd2615cab52751
+      internalID: 2090384081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer_charging_spike_5
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 37
+        width: 28
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0a65a15c176c4448c376822e5907d3
+      internalID: -1363758
       vertices: []
       indices: 
       edges: []
@@ -235,6 +277,7 @@ TextureImporter:
       hammer_charging_spike_2: -173674074
       hammer_charging_spike_3: 2090384081
       hammer_charging_spike_4: -352856530
+      hammer_charging_spike_5: -1363758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
