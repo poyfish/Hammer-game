@@ -103,9 +103,7 @@ public class Hammer : MonoBehaviour
         }
     }
 
-    
-
-
+    // this is literal hell spawn, I have no idea why I need it, it dosn't show up anywhere else, but it gives errors when I delete it
     IEnumerator ActivateCollider()
     {
         GameObject colliderObject = isHammeringRight ? hammerColliderRight.gameObject : hammerColliderLeft.gameObject;
