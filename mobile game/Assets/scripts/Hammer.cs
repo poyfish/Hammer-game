@@ -29,7 +29,7 @@ public class Hammer : MonoBehaviour
 
     private bool isUsingSpecialAttack;
 
-
+    private bool canInteruptChargeUpAnimation = true;
 
     void Awake()
     {
@@ -46,9 +46,8 @@ public class Hammer : MonoBehaviour
     void Update()
     {
         Vector3 mousePosition = Input.mousePosition;
-    
-        isMouseRight = mousePosition.x >= Screen.width / 2;
 
+        isMouseRight = mousePosition.x >= Screen.width / 2;
 
         if (HammerObject.IsSpecial)
         {
@@ -59,6 +58,7 @@ public class Hammer : MonoBehaviour
             HandleHammer();
         }
     }
+
     private void HandleHammer()
     {
         hammerColliderLeft.edgeRadius = HammerObject.EdgeRadius;
@@ -74,8 +74,6 @@ public class Hammer : MonoBehaviour
 
     private void HandleSpecialHammer()
     {
-        HammerObject.specialAbilityChargeUpTime = 1f;
-
         hammerColliderLeft.edgeRadius = HammerObject.EdgeRadius;
         hammerColliderRight.edgeRadius = HammerObject.EdgeRadius;
 
@@ -83,13 +81,21 @@ public class Hammer : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !isHammering)
         {
-            SpecialChargeUpTimer = 0;
+            canInteruptChargeUpAnimation = false;
+            anim.CrossFade(HammerObject.SpecialAbilityChargeUpAnimation.name, 0.1f, 0, 0);
         }
 
+        if (Input.GetMouseButton(0) && !isHammering)
+        {
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName(HammerObject.SpecialAbilityChargeUpAnimation.name))
+            {
+                anim.CrossFade(HammerObject.SpecialAbilityChargeUpAnimation.name, 0.1f, 0, 0);
+            }
+        }
 
         if (Input.GetMouseButtonUp(0) && !isHammering)
         {
-            anim.CrossFade(HammerObject.SpecialAbilityChargeUpAnimation.name, 0, 0);
+            canInteruptChargeUpAnimation = true;
 
             if (SpecialChargeUpTimer < HammerObject.specialAbilityChargeUpTime)
             {
@@ -97,9 +103,10 @@ public class Hammer : MonoBehaviour
             }
             else
             {
-                print("special hit");
                 SpecialHit();
             }
+
+            SpecialChargeUpTimer = 0;
         }
     }
 
@@ -117,7 +124,10 @@ public class Hammer : MonoBehaviour
 
         yield return new WaitForSeconds(HammerObject.Cooldown);
 
-        anim.CrossFade(HammerObject.IdleAnimation.name,0,0);
+        if (canInteruptChargeUpAnimation)
+        {
+            anim.CrossFade(HammerObject.IdleAnimation.name, 0, 0);
+        }
 
         isHammering = false;
     }
@@ -125,7 +135,7 @@ public class Hammer : MonoBehaviour
     void HitGround()
     {
         shake.Shake(HammerObject.cycles, HammerObject.force, HammerObject.interval);
-        HitSoundSource.PlayOneShot(HammerObject.HitSound,1);
+        HitSoundSource.PlayOneShot(HammerObject.HitSound, 1);
     }
 
     public void ChangeHammer(HammerObject hammer)
