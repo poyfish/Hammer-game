@@ -80,6 +80,7 @@ public class Hammer : MonoBehaviour
 
     private void HandleSpecialHammer()
     {
+        HammerObject.specialAbilityChargeUpTime = 2;
         hammerColliderLeft.edgeRadius = HammerObject.EdgeRadius;
         hammerColliderRight.edgeRadius = HammerObject.EdgeRadius;
 
@@ -95,11 +96,19 @@ public class Hammer : MonoBehaviour
         {
             anim.CrossFade(HammerObject.SpecialAbilityChargeUpAnimation.name, 0, 0);
 
-            if (SpecialChargeUpTimer < HammerObject.specialAbilityChargeUpTime)
+            if (SpecialChargeUpTimer < HammerObject.specialAbilityChargeUpTime) // regular hit
             {
-                print("regular hit");
+                anim.CrossFade(HammerObject.HammerAnimation.name, 0, 0);
+
+                if (HammerObject.Effect != null) HammerObject.Effect.OnHit(this);
+
+                sprite.flipX = isMouseRight;
+
+                HitCounter++;
+
+                isHammeringRight = isMouseRight;
             }
-            else
+            else // special hit
             {
                 print("special hit");
             }
@@ -108,7 +117,7 @@ public class Hammer : MonoBehaviour
 
     
 
-
+/*
     IEnumerator ActivateCollider()
     {
         GameObject colliderObject = isHammeringRight ? hammerColliderRight.gameObject : hammerColliderLeft.gameObject;
@@ -126,6 +135,7 @@ public class Hammer : MonoBehaviour
 
         isHammering = false;
     }
+*/
 
     void HitGround()
     {
