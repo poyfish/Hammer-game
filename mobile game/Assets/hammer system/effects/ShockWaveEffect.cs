@@ -24,10 +24,7 @@ public class ShockWaveEffect : HammerEffect
 
     public override void OnHit(Hammer hammer)
     {
-        if(hammer.HitCounter % 3 == 0)
-        {
-            hammer.StartCoroutine(ShockWave(hammer));
-        }
+        hammer.StartCoroutine(ShockWave(hammer));   
     }
 
     public IEnumerator ShockWave(Hammer hammer)

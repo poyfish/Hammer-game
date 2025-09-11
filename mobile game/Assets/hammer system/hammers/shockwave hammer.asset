@@ -21,11 +21,11 @@ MonoBehaviour:
   SpecialAbilityChargeUpAnimation: {fileID: 7400000, guid: 21e4392b63cebd9449e4e35d7ba4d749, type: 2}
   SpecialAbilityChargeHammerAnimation: {fileID: 0}
   EdgeRadius: 0.4
-  Cooldown: 0.2
+  Cooldown: 0.15
   HitSound: {fileID: 8300000, guid: 513dbef493618a540b406cc30841d197, type: 3}
   cycles: 4
   force: 0.2
   interval: 0.005
-  specialAbilityChargeUpTime: 0
+  specialAbilityChargeUpTime: 1
   Effect: {fileID: 11400000, guid: e62e661a96eff7848b8c2e6a29a20fcf, type: 2}
   SpecialEffect: {fileID: 11400000, guid: 24d309fbed13d6a4e8e57e512b3a5705, type: 2}

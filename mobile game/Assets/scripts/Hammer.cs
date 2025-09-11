@@ -29,6 +29,8 @@ public class Hammer : MonoBehaviour
 
     private bool isUsingSpecialAttack;
 
+
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -64,15 +66,7 @@ public class Hammer : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !isHammering)
         {
-            anim.CrossFade(HammerObject.HammerAnimation.name, 0, 0);
-
-            if (HammerObject.Effect != null) HammerObject.Effect.OnHit(this);
-
-            sprite.flipX = isMouseRight;
-
-            HitCounter++;
-
-            isHammeringRight = isMouseRight;
+            RegularHit();
         }
     }
 
@@ -80,6 +74,8 @@ public class Hammer : MonoBehaviour
 
     private void HandleSpecialHammer()
     {
+        HammerObject.specialAbilityChargeUpTime = 1f;
+
         hammerColliderLeft.edgeRadius = HammerObject.EdgeRadius;
         hammerColliderRight.edgeRadius = HammerObject.EdgeRadius;
 
@@ -97,11 +93,12 @@ public class Hammer : MonoBehaviour
 
             if (SpecialChargeUpTimer < HammerObject.specialAbilityChargeUpTime)
             {
-                print("regular hit");
+                RegularHit();
             }
             else
             {
                 print("special hit");
+                SpecialHit();
             }
         }
     }
@@ -138,5 +135,31 @@ public class Hammer : MonoBehaviour
         HammerObject = hammer;
 
         anim.CrossFade(HammerObject.IdleAnimation.name, 0, 0);
+    }
+
+    private void RegularHit()
+    {
+        anim.CrossFade(HammerObject.HammerAnimation.name, 0, 0);
+
+        if (HammerObject.Effect != null) HammerObject.Effect.OnHit(this);
+
+        sprite.flipX = isMouseRight;
+
+        HitCounter++;
+
+        isHammeringRight = isMouseRight;
+    }
+
+    private void SpecialHit()
+    {
+        anim.CrossFade(HammerObject.HammerAnimation.name, 0, 0);
+
+        if (HammerObject.Effect != null) HammerObject.SpecialEffect.OnHit(this);
+
+        sprite.flipX = isMouseRight;
+
+        HitCounter++;
+
+        isHammeringRight = isMouseRight;
     }
 }
