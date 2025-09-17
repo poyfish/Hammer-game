@@ -1211,7 +1211,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.7479134, y: 0}
+  m_Offset: {x: 2.4085243, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1222,7 +1222,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.633522, y: 2.4375}
+  m_Size: {x: 20.765059, y: 2.4375}
   m_EdgeRadius: 0
 --- !u!1 &619394800
 GameObject:
@@ -2525,7 +2525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2626970994924393048, guid: 06b0b41739607a7438b5cc512546b8f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.94
+      value: 17.24
       objectReference: {fileID: 0}
     - target: {fileID: 2626970994924393048, guid: 06b0b41739607a7438b5cc512546b8f2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2899,7 +2899,19 @@ MonoBehaviour:
   TestMode: 1
   OnAdComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1388551375
 GameObject:
   m_ObjectHideFlags: 0
@@ -4137,7 +4149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2626970994924393048, guid: 06b0b41739607a7438b5cc512546b8f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.32
+      value: -12.83
       objectReference: {fileID: 0}
     - target: {fileID: 2626970994924393048, guid: 06b0b41739607a7438b5cc512546b8f2, type: 3}
       propertyPath: m_LocalPosition.y

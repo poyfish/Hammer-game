@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0b0539200bef7b46953a876c72d7581
+guid: 1122accbc9091b54b8465f75969f28bd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,7 +44,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -107,6 +107,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slime enemy walking_0
+      name: slime_enemy_walking_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 19
-        width: 34
-        height: 21
+        x: 22
+        y: 24
+        width: 20
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 105e3bf5762b2594ba4e0cd6448d3258
-      internalID: -1472598159
+      spriteID: 40b7ea5f0a7a4ae458fbe73a7f61d581
+      internalID: -1093666950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime enemy walking_1
+      name: slime_enemy_walking_1
       rect:
         serializedVersion: 2
-        x: 71
-        y: 19
-        width: 33
-        height: 21
+        x: 85
+        y: 24
+        width: 22
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37e49c5e80265f445895ecc5d6e18e58
-      internalID: -99583565
+      spriteID: 08bad4367d8be1845ac1a93f39dc20d8
+      internalID: 1011647077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime enemy walking_2
+      name: slime_enemy_walking_2
       rect:
         serializedVersion: 2
-        x: 132
-        y: 19
-        width: 31
-        height: 20
+        x: 152
+        y: 24
+        width: 16
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e60dd89fcc307a4fb9cddd4671b01f6
-      internalID: -122414246
+      spriteID: 6794977925751924d8758167273a8ff2
+      internalID: 236862351
       vertices: []
       indices: 
       edges: []
@@ -196,9 +209,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slime enemy walking_0: -1472598159
-      slime enemy walking_1: -99583565
-      slime enemy walking_2: -122414246
+      slime_enemy_walking_0: -1093666950
+      slime_enemy_walking_1: 1011647077
+      slime_enemy_walking_2: 236862351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
