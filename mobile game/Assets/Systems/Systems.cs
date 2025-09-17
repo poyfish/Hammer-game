@@ -7,6 +7,7 @@ public class Systems : Singleton<Systems>
     public static HammerManager HammerManager;
     public static ScenesManager ScenesManager;
     public static ScoreManager ScoreManager;
+    public static TipsManager TipsManager;
 
     private void Awake()
     {
@@ -15,5 +16,6 @@ public class Systems : Singleton<Systems>
         HammerManager = GetComponentInChildren<HammerManager>();
         ScenesManager = GetComponentInChildren<ScenesManager>();
         ScoreManager = GetComponentInChildren<ScoreManager>();
+        TipsManager = GetComponentInChildren<TipsManager>();
     }
 }
