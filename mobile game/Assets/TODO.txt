@@ -1,0 +1,7 @@
+TODO:
+1. remove the current stat system
+2. create a stat system inside enemy script
+3. finish tip system
+
+NOTES:
+don't add any movement logic inside enemy script, this will be hanled by separate scripts
