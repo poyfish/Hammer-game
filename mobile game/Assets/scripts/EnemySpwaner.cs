@@ -53,7 +53,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        MoveEnemies();
+        //MoveEnemies();
     }
 
     public void DiscardEnemy(EnemyInfo Info)
@@ -91,10 +91,16 @@ public class EnemySpawner : MonoBehaviour
                 {
                     Physics2D.IgnoreCollision(enemyInfo.coll, other.GetComponent<Collider2D>());
                 }
+
+                foreach (EnemyInfo enemyInf in SpawnedEnemies) // enemy movement direction will be decided by the flipx of the enemy
+                {
+                    enemyInf.sprite.flipX = !isSpwanerSpwaningRight;
+                }
             }
         }
     }
 
+    /*
     void MoveEnemies()
     {
         foreach (EnemyInfo enemy in SpawnedEnemies)
@@ -104,4 +110,5 @@ public class EnemySpawner : MonoBehaviour
             enemy.rb.velocity = new Vector2((isSpwanerSpwaningRight ? 1 : -1) * enemy.stats.speed, enemy.rb.velocity.y);
         }
     }
+    */
 }

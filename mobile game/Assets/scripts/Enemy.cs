@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     private ScoreManager scoreManager;
 
     [Header("Stats")]
-    public int difficultyMin;
+    // health to be added
     public float speed;
 
     void Start()

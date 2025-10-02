@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5865130892886102682}
   - component: {fileID: 6702563068121570610}
   - component: {fileID: -5389624248468423732}
+  - component: {fileID: 5692743567285760440}
   m_Layer: 6
   m_Name: tornado enemy
   m_TagString: Enemy
@@ -109,6 +110,7 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 8
+  speed: 5
 --- !u!114 &6967194324186957761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,3 +312,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5692743567285760440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463855092563684590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bfe6125fefbacc18f421d6c03fb9de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

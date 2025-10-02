@@ -9,9 +9,6 @@ public class EnemyPool : ScriptableObject
     public struct EnemyStats
     {
         public GameObject Prefab;
-
-        public float speed;
-
         public int difficultyMin;
     }
 
