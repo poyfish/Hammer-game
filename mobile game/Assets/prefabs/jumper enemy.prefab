@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6349797810977277107}
   - component: {fileID: 6170014564275699478}
   - component: {fileID: 8793009503190316897}
-  - component: {fileID: 2261152112899358248}
   - component: {fileID: 862822281602804348}
+  - component: {fileID: 5320489540752655658}
   m_Layer: 6
   m_Name: jumper enemy
   m_TagString: Enemy
@@ -181,6 +181,7 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 8
+  speed: 3
 --- !u!95 &8793009503190316897
 Animator:
   serializedVersion: 5
@@ -202,23 +203,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2261152112899358248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5575361049211894340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75f1639b039adf843a6add7df977b761, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 14
-  jumpSpeed: 8
-  jumpableGround:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!82 &862822281602804348
 AudioSource:
   m_ObjectHideFlags: 0
@@ -315,3 +299,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5320489540752655658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575361049211894340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a9b9e0faae096fc9499895804b90a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 14
+  jumpSpeed: 0
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 8
