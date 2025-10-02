@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
 
     private Animator anim;
     private Hammer hammer;
+    private Rigidbody2D rb;
+    private BoxCollider2D coll;
 
     [HideInInspector]
     public bool IsDead;
@@ -34,6 +36,10 @@ public class Enemy : MonoBehaviour
         hammer = FindObjectOfType<Hammer>();
 
         scoreManager = FindObjectOfType<ScoreManager>();
+
+        rb = GetComponent<Rigidbody2D>();
+
+        coll = GetComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -61,8 +67,8 @@ public class Enemy : MonoBehaviour
 
         scoreManager.AddScore(Random.Range(ScoreRewardMin, ScoreRewardMax));
 
-        Info.rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        Info.coll.enabled = false;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        coll.enabled = false;
 
         anim.CrossFade(squashed_animation_name, 0, 0);
         Invoke("Destroy", 2f);

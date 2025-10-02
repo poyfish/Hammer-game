@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RegularMovement : MonoBehaviour
 {
-    Rigidbody2D rb;
-    SpriteRenderer sprite;
+    private Rigidbody2D rb;
+    private SpriteRenderer sprite;
     Enemy enemy;
 
     void Start()
