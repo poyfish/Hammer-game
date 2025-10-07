@@ -12,6 +12,9 @@ public class JumpingMovement : MonoBehaviour
 
     public float jumpForce;
 
+    [SerializeField] private string jumpingAnimationName;
+    [SerializeField] private string midAirAnimationName;
+
     [SerializeField] private LayerMask jumpableGround;
     void Start()
     {
@@ -31,12 +34,12 @@ public class JumpingMovement : MonoBehaviour
 
         if (IsGrounded())
         {
-            anim.CrossFade("jumping_enemy_jumping", 0,0);
+            anim.CrossFade(jumpingAnimationName, 0,0);
         }
         else
         {
             rb.velocity = new Vector2((sprite.flipX ? -1 : 1) * enemy.speed, rb.velocity.y);
-            anim.CrossFade("jumping_enemy_mid_air", 0, 0);
+            anim.CrossFade(midAirAnimationName, 0, 0);
         }
 
     }

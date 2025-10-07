@@ -312,7 +312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 14
-  jumpSpeed: 0
+  jumpingAnimationName: jumping_enemy_jumping
+  midAirAnimationName: jumping_enemy_mid_air
   jumpableGround:
     serializedVersion: 2
     m_Bits: 8
